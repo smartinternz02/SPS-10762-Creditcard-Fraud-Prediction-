@@ -1,5 +1,0 @@
-1. Dataset of Credit Card Transactions from Kaggle: 
-	https://www.kaggle.com/mlg-ulb/creditcardfraud
-
-2. Preprocessed Dataset
-	[drive link]
