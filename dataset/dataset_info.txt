@@ -1,0 +1,5 @@
+1. Labeled Dataset of Credit Card Transactions from Kaggle: 
+	https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+2. Preprocessed Dataset: Discretized Class variables into 'fraud-negative' and 'fraud-positive'.
+	https://www.kaggle.com/nagendranainala/creditcardnominal
