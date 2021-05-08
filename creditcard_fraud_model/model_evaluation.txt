@@ -1,0 +1,36 @@
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Results
+======
+
+Correctly Classified Instances      284672               99.9561 %
+Incorrectly Classified Instances       125                0.0439 %
+Kappa statistic                          0.8582
+K&B Relative Info Score            -80926140.5826 %
+K&B Information Score               -14763.7811 bits     -0.0518 bits/instance
+Class complexity | order 0            5178.4054 bits      0.0182 bits/instance
+Class complexity | scheme            48805.4705 bits      0.1714 bits/instance
+Complexity improvement     (Sf)     -43627.0651 bits     -0.1532 bits/instance
+Mean absolute error                      0.0009
+Root mean squared error                  0.0198
+Relative absolute error                 26.204  %
+Root relative squared error             48.0198 %
+Total Number of Instances           284797     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.222    1.000      1.000    1.000      0.863    0.952     1.000     fraud-negative
+                 0.778    0.000    0.957      0.778    0.858      0.863    0.952     0.856     fraud-positive
+Weighted Avg.    1.000    0.221    1.000      1.000    1.000      0.863    0.952     1.000     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 284293     17 |      a = fraud-negative
+    108    379 |      b = fraud-positive
+
