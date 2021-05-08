@@ -30,7 +30,7 @@ public class FraudPredictionMain {
 		/* B. Loading the saved Model Object for making the predictions. */
 		Classifier rf_classifier = null;
 		try {
-			rf_classifier = (Classifier) weka.core.SerializationHelper.read("saved_models\\creditcard_fraud.model");
+			rf_classifier = (Classifier) weka.core.SerializationHelper.read("saved_models_objects\\creditcard_fraud.model");
 		}catch (Exception e) {
 			System.out.println("Unable to load the classifier.");
 			e.printStackTrace();
@@ -58,7 +58,7 @@ public class FraudPredictionMain {
         	/* D. Predicting the Fraud of the Unlabeled Data */
         	for(int i=0; i<unlabeled_instances.numInstances(); i++) {
         		double s = rf_classifier.classifyInstance(unlabeled_instances.instance(i));
-        		Attribute training_class_attr = (Attribute) weka.core.SerializationHelper.read("saved_models\\training_instances_class_attribute.obj");
+        		Attribute training_class_attr = (Attribute) weka.core.SerializationHelper.read("saved_models_objects\\training_instances_class_attribute.obj");
         	
         		System.out.printf("Transaction-ID: %-3d",(int)unlabeled_id_instances.get(i).value(0));
         		System.out.printf(" Transaction-Time: %-5d",(int)unlabeled_instances.get(i).value(0));
