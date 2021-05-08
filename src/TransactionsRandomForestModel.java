@@ -36,8 +36,8 @@ public class TransactionsRandomForestModel {
 		rf_classifier.buildClassifier(training_instances);
 
 		// Saving the model in the saved_models directory
-		weka.core.SerializationHelper.write("saved_models\\" + model_file_name, rf_classifier);
-		weka.core.SerializationHelper.write("saved_models\\training_instances_class_attribute.obj", training_instances.classAttribute());
+		weka.core.SerializationHelper.write("saved_models_objects\\" + model_file_name, rf_classifier);
+		weka.core.SerializationHelper.write("saved_models_objects\\training_instances_class_attribute.obj", training_instances.classAttribute());
 	}
 	
 	public static void printStats() throws Exception {
